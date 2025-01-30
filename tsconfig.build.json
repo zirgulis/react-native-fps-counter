@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig",
+  "exclude": ["example", "lib", "**/__tests__/**"],
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "isolatedModules": true,
+    "outDir": "./lib/typescript"
+  }
+} 
