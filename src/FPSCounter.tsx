@@ -1,11 +1,11 @@
-import React from "react";
-import { StyleSheet } from "react-native";
+import React from 'react';
+import { StyleSheet } from 'react-native';
 import Animated, {
   useSharedValue,
   useFrameCallback,
   runOnJS,
-} from "react-native-reanimated";
-import type { FPSCounterProps, FrameData } from "./types";
+} from 'react-native-reanimated';
+import type { FPSCounterProps, FrameData } from './types';
 
 const DEFAULT_UPDATE_INTERVAL = 1000;
 const TARGET_FPS = 60;
@@ -30,8 +30,8 @@ export const FPSCounter = ({
     setMetrics(data);
   }, []);
 
-  useFrameCallback((frameInfo) => {
-    "worklet";
+  useFrameCallback(frameInfo => {
+    'worklet';
     const now = frameInfo.timestamp;
 
     if (lastFrameTimestamp.value === -1) {
@@ -88,17 +88,17 @@ export const FPSCounter = ({
 
 const styles = StyleSheet.create({
   container: {
-    position: "absolute",
+    position: 'absolute',
     top: 40,
     right: 10,
-    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
     padding: 8,
     borderRadius: 4,
     zIndex: 9999,
   },
   text: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 14,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
 });

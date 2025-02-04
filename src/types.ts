@@ -27,4 +27,4 @@ export type FrameData = {
    * Number of dropped frames in the last interval
    */
   droppedFrames: number;
-}; 
+};
